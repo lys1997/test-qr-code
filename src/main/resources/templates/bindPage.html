@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>app绑定</title>
+<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+		//alert("aaa");
+		$.ajax({ 
+			url: "makeBindCode", 
+			type: "POST",
+			success: function(data){
+				//alert(data);
+			    $("#codImg").html('<img src="'+data+'"/>');
+			}
+		});
+	});
+</script>
+
+</head>
+<body>
+	<h3>请扫描二维码与专用设备绑定</h3>
+	<div id="codImg"></div>
+</body>
+</html>
